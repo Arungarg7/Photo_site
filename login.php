@@ -14,14 +14,15 @@ session_start();
     $getdata = mysqli_fetch_array($check_result);
    // print_r($getdata); die;
     if  (!empty($getdata)) {
+        $_SESSION['userid'] = $getdata['email'];
         $_SESSION['username'] = $getdata['user_name'];
         echo '<script>alert("login successfully");</script>';
-        header('location: index.php');
-        echo '<script>alert("login successfully");</script>';
+       // echo '<script>window.location.href = "index.php";</script>';
     } else {
-       
-        echo "Error: " . $check_query . "<br>" . mysqli_error($con);
+          echo '<script>alert("wrong Password");</script>';
+     //   echo "Error: " . $check_query . "<br>" . mysqli_error($con);
     }
+    echo '<script>window.location.href = "index.php";</script>';
 }
 ?>
 

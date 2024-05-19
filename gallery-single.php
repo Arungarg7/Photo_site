@@ -11,7 +11,7 @@
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
             <h2>Gallery Single</h2>
-            <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+            <p>Step into a world where moments are frozen in time, where emotions are captured in a single frame, and where every image tells a story. Welcome to the gallery of Photography, where beauty, emotion, and artistry converge to create a visual feast for the senses.</p>
 
             <a class="cta-btn" href="contact.php">Available for hire</a>
 

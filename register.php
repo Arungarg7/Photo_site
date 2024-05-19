@@ -30,13 +30,16 @@ include "connection.php";
           $_SESSION['userid'] = $_POST['email'];
           $_SESSION['username'] = $_POST['name'];
 
-            echo '<script>alert("Thanks for Registration");</script>';
-           echo '<script>window.location.href = "index.php";</script>'; // Redirect to login page using JavaScript
+          echo '<script>alert("Thanks for Registration");</script>';
+          echo '<script>window.location.href = "index.php";</script>'; // Redirect to login page using JavaScript
             exit(); // Make sure no further code execution happens after redirection
         } else {
-            echo "Error: " . $insert_query . "<br>" . mysqli_error($con);
-            echo '<script>window.location.href = "index.php";</script>';
+              echo '<script>alert("Registration Failed");</script>';
+            //echo "Error: " . $insert_query . "<br>" . mysqli_error($con);
+           // echo '<script>window.location.href = "index.php";</script>';
         }
+        echo '<script>alert("Registration Failed");</script>';
+        echo '<script>window.location.href = "index.php";</script>';
     }
 }
 ?>

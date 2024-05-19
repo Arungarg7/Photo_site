@@ -72,15 +72,15 @@ include "connection.php";
           <li><a href="contact.php">Contact</a></li>
 
           <?php
-          if(isset($_SESSION['username'])) {
+          if(isset($_SESSION['userid'])) {
             // User is logged in, so show logout option
             echo '<li><a href="logoutuser.php">Logout</a></li>';
           } else {
             // User is logged out, so show login option
-            echo '<li data-bs-toggle="modal" data-bs-target="#myModal1" class="mx-2">Login</li>';
+            echo '<li><a href=""  data-bs-toggle="modal" data-bs-target="#myModal1">Login</a></li>';
           }
           ?>
-          <li data-bs-toggle="modal" data-bs-target="#myModal" class="mx-2">Registration</li>
+          <li ><a href="" data-bs-toggle="modal" data-bs-target="#myModal">Registration</a></li>
           
         </ul>
       </nav><!-- .navbar -->
@@ -108,74 +108,7 @@ include "connection.php";
        
       </div>
 
- <?php 
- 
-//  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-//   // Retrieve form data
-//   $name = $_POST['name'];
-//   $address = $_POST['address'];
-//   $contactno = $_POST['contactno'];
-//   $email = $_POST['email'];
-//   $password = $_POST['password'];
-
-//   // Insert data into database
-//   $qry = "INSERT INTO `users` (`user_name`, `email`, `contact_no`, `address`, `password`) VALUES ('$name', '$email', '$contactno', '$address', '$password')";
-
-//   if (mysqli_query($con, $qry)) {
-//     echo '<script>
-//           alert("Thanks for Registration");
-//           </script>';
-//   } else {
-//     echo "Error: " . $qry . "<br>" . mysqli_error($con);
-//   }
-// }
-
-// if(isset($_POST['submit'])){
-//   // Check if email already exists in the database
-//   $email = $_POST['email'];
-//   $check_query = "SELECT * FROM users WHERE email='$email'";
-//   $check_result = mysqli_query($con, $check_query);
-//   $num_rows = mysqli_num_rows($check_result);
-//   if ($num_rows > 0) {
-//       echo '<script>alert("Email already exists. Please use a different email.");</script>';
-//   } else {
-//       // Retrieve form data
-//       $name = $_POST['name'];
-//       $mobile = $_POST['mobile'];
-//       $password = $_POST['password'];
-
-//       // Insert data into database
-//       $insert_query = "INSERT INTO users (user_name, email, mobile, password) VALUES ('$name', '$email', '$mobile', '$password')";
-//       $insert_result = mysqli_query($con, $insert_query);
-//       if ($insert_result) {
-//           echo '<script>alert("Thanks for Registration");</script>';
-//           echo '<script>window.location.href = "index.php";</script>'; // Redirect to login page using JavaScript
-//           exit(); // Make sure no further code execution happens after redirection
-//       } else {
-//           echo "Error: " . $insert_query . "<br>" . mysqli_error($con);
-//       }
-//   }
-// }
-
-
-  ?>
-
-
- 
-
-
-      <!-- Modal body -->
-      <!-- <div class="modal-body">
-        <form method="post" action="register.php" name="reg">
-        Name:       <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-        Mobile.:    <input type="text" class="form-control" id="mobile" placeholder="Enter mobile no" name="mobile">
-        E-mail:     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-        password:   <input type="password" class="form-control" id="password" placeholder="Enter password" name="password"><br>
-        <input type="submit" name="submit" class="btn btn-info" value="save">
-      </form>
-    </div> -->
-
-    <div class="modal-body">
+  <div class="modal-body">
   <form method="post" action="register.php" name="reg">
     <div class="form-group">
       <label for="name">Name:</label>
@@ -217,7 +150,7 @@ include "connection.php";
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">User Sign In </h4>
+        <h4 class="modal-title">User Login</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
