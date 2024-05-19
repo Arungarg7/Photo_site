@@ -1,8 +1,8 @@
 <?php
 include "connection.php";
 session_start();
-print_r( $_SESSION);
-die;
+// print_r( $_SESSION);
+// die;
 
 ?>
 <?php include "header.php"; ?>
